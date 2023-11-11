@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="globals_fillingdata.css" />
+    <link rel="stylesheet" href="style_fillingdata.css" />
+    <style>
+    input[type=checkbox] {
+    accent-color: gray;
+    }
+    </style>
+  </head>
+
+  <body>
+    <div class="frame">
+      <div class="div">
+        <div class="overlap">
+          <img class="customer-line" src="img/line-1.svg" />
+          <div class="customer">Покупатель</div>
+        </div>
+
+        <form name="form" id="form">
+          <div class="overlap-group">
+            <div class="data">Фамилия</div>
+            <input type="text" id="surname" name="surname" required minlength="3" maxlength="10" size="10"/>
+            <img class="img" src="img/line-9.svg" />
+          </div>
+
+          <div class="overlap-1">
+            <div class="data">Имя</div>
+            <input type="text" id="firstname" name="firstname" required minlength="3" maxlength="15" size="10" />
+            <img class="img" src="img/line-9.svg" />
+          </div>
+
+          <div class="overlap-2">
+            <div class="data">Отчество</div> <!--text-wrapper-4-->
+            <input type="text" id="otch" name="otch" required minlength="3" maxlength="15" size="10" />
+            <img class="img" src="img/line-9.svg" />
+          </div>
+
+          <div class="overlap-3">
+            <div class="data">E-mail</div>
+            <input type="text" id="email" name="email" required minlength="8" maxlength="30" size="10" />
+            <img class="img" src="img/line-9.svg" />
+          </div>
+
+          <div class="overlap-4">
+            <div class="data">Телефон</div>
+            <input type="text" id="telnum" name="telnum" required minlength="11" maxlength="11" size="10" />
+            <img class="img" src="img/line-9.svg" />
+          </div>
+
+        <div class="overlap-5">
+          <p class="p">Указание личных данных облегчает оформление документа покупки автомобиля</p>
+          <div class="personal">Личные данные</div>
+          <div class="ellipse"></div>
+          <div class="i">i</div>
+
+          <input type="checkbox" id="agreement" name="agreement" style="transform:scale(0.6);"/>
+
+          <div class="agreement-text">
+            <label for="agreement">Согласие на обработку персональных данных</label>
+          </div>
+
+          <div class="gal" >
+            <div class="overlap-7">
+              <div class="data">Серия, номер паспорта</div>
+              <input type="text" id="passport" name="passport" minlength="10" maxlength="10" size="10" />
+              <img class="img" src="img/line-9.svg" />
+            </div>
+            <div class="overlap-8">
+              <div class="data">ИНН</div>
+              <input type="text" id="inn" name="inn" minlength="12" maxlength="12" size="10" />
+              <img class="img" src="img/line-9.svg" />
+            </div>
+            </div>
+        </div>
+        </form>
+
+        <div class="overlap-9">
+          <p class="total">
+            <span class="span">Итого: 1 позиция на 5 000 ₽<br /><br /></span>
+            <span class="total-text"
+              >Срок бронирования: до 24 ноября<br /><br />После оформления заказа менеджер дилерского центра
+              свяжется с вами</span></p>
+
+          <div class="overlap-10">
+            <div class="rectangle-2"></div>
+            <p><button type="button" class="trigger">Оформить</button></p>
+              <div class="modal">
+                  <div class="modal-content">
+                      <span class="close-button">×</span>
+                      <p class="window1">Заказ оформлен</p>
+                    <p class="window"> Срок бронирования: до 24 ноября в 20:00</p>
+                    <p class="window"> С вами свяжется менеджер дилерского центра для дальнейшего подписания договора</p>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="overlap-11">
+          <img class="line-order" src="img/line-3.svg" />
+          <div class="order">Оформление заказа</div>
+        </div>
+
+        <div class="group">
+          <div class="info">
+            <img class="info-up" src="img/line-1.svg" />
+            <div class="customer">Информация о заказе</div>
+          </div>
+          <img class="info-down" src="img/line-2.svg" />
+          <img class="rectangle-3" src="img/car_picture.png" />
+          <p class="classic">
+            <span class="car-price">Kia K5 2022<br /></span>
+            <span class="price">3 444 900 ₽<br /><br /></span>
+            <span class="color">Цвет: серый<br />Комплектация: максимальная</span>
+          </p>
+          <p class="left-text">
+            <span class="car-price">5 000 ₽<br /></span>
+            <span class="prepayment"><br />Предоплата<br />Бронирование 5 дней</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+   <script>
+    var modal = document.querySelector(".modal");
+    var trigger = document.querySelector(".trigger");
+    var closeButton = document.querySelector(".close-button");
+    var surname = document.getElementById("surname");
+    var firstname = document.getElementById("firstname");
+    var otch = document.getElementById("otch");
+    var telnum = document.getElementById("telnum");
+    var email = document.getElementById("email");
+    var form =  document.getElementById("form")[0];
+
+    function windowOnClick(event) {
+      //if (event.target === modal) {
+        toggleModal();
+    }
+
+    function toggleModal() {
+      modal.classList.toggle("show-modal");
+    }
+
+    function show_modal() {
+      if (    surname.checkValidity() &&
+              firstname.checkValidity() &&
+              otch.checkValidity() &&
+              telnum.checkValidity() &&
+              email.checkValidity()
+      ){
+        modal.classList.toggle("show-modal");
+      }
+      else{
+        alert('Есть пустые поля')
+      }
+
+    }
+
+    trigger.addEventListener("click", show_modal);
+    closeButton.addEventListener("click", toggleModal);
+    /*window.addEventListener("click", windowOnClick);*/
+    </script>
+
+  </body>
+</html>
