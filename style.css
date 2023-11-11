@@ -213,6 +213,22 @@
   letter-spacing: 0;
   line-height: normal;
 }
+.frame .button-send-cars-attribute{
+  position: absolute;
+  width: 213px;
+  height: 40px;
+  top: 495px;
+  left: 999px;
+  background-color: #726e6f;
+  border-radius: 15px;
+  font-weight: 800;
+  color: #fff9f9;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Inter", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
 
 body-c {
   display: flex;
