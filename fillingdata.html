@@ -34,19 +34,19 @@
 
           <div class="overlap-2">
             <div class="data">Отчество</div> <!--text-wrapper-4-->
-            <input type="text" id="otch" name="otch" required minlength="3" maxlength="15" size="10" />
+            <input type="text" id="otch" name="otch" minlength="3" required maxlength="15" size="10" />
             <img class="img" src="img/line-9.svg" />
           </div>
 
           <div class="overlap-3">
             <div class="data">E-mail</div>
-            <input type="text" id="email" name="email" required minlength="8" maxlength="30" size="10" />
+            <input type="text" id="email" name="email" minlength="8" required maxlength="30" size="10" />
             <img class="img" src="img/line-9.svg" />
           </div>
 
           <div class="overlap-4">
             <div class="data">Телефон</div>
-            <input type="text" id="telnum" name="telnum" required minlength="11" maxlength="11" size="10" />
+            <input type="text" id="telnum" name="telnum" minlength="11" required maxlength="11" size="10" />
             <img class="img" src="img/line-9.svg" />
           </div>
 
@@ -65,15 +65,15 @@
           <div class="gal" >
             <div class="overlap-7">
               <div class="data">Серия, номер паспорта</div>
-              <input type="text" id="passport" name="passport" minlength="10" maxlength="10" size="10" />
+              <input type="text" id="passport" name="passport" required minlength="10" maxlength="11" size="10" />
               <img class="img" src="img/line-9.svg" />
             </div>
             <div class="overlap-8">
               <div class="data">ИНН</div>
-              <input type="text" id="inn" name="inn" minlength="12" maxlength="12" size="10" />
+              <input type="text" id="inn" name="inn" required minlength="12" maxlength="13" size="10" />
               <img class="img" src="img/line-9.svg" />
             </div>
-            </div>
+          </div>
         </div>
         </form>
 
@@ -132,7 +132,11 @@
     var otch = document.getElementById("otch");
     var telnum = document.getElementById("telnum");
     var email = document.getElementById("email");
-    var form =  document.getElementById("form")[0];
+
+    var agreement = document.getElementById("agreement");
+
+    var passport = document.getElementById("passport");
+    var inn = document.getElementById("inn");
 
     function windowOnClick(event) {
       //if (event.target === modal) {
@@ -144,16 +148,26 @@
     }
 
     function show_modal() {
+      /*if (agreement.checked){
+        alert('Галочка есть');
+        if (passport.checkValidity() && inn.checkValidity()){
+          alert('Данные заполнены');
+        }
+      }
+      else{
+        alert('Галочки нет');
+      }*/
       if (    surname.checkValidity() &&
               firstname.checkValidity() &&
               otch.checkValidity() &&
               telnum.checkValidity() &&
-              email.checkValidity()
+              email.checkValidity() &&
+              ((agreement.checked && passport.checkValidity() && inn.checkValidity())|| !agreement.checked)
       ){
         modal.classList.toggle("show-modal");
       }
       else{
-        alert('Есть пустые поля')
+        alert('Есть пустые поля');
       }
 
     }
