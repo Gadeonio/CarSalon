@@ -4,6 +4,17 @@
   <head>
     <link rel="stylesheet" href="globals_fillingdata.css" />
     <link rel="stylesheet" href="style_fillingdata.css" />
+    <!--<script>
+      alert(Object.keys(localStorage));
+      let keys = Object.keys(localStorage);
+      alert(localStorage.getItem('brand'));
+      alert(localStorage.getItem('model'));
+      /*for (let key in keys){
+        alert(`${key}: ${localStorage.getItem(key)}`);
+        console.log('${key}: ${localStorage.getItem(key)}');
+      }
+      alert(localStorage.getItem())*/
+    </script>-->
     <style>
     input[type=checkbox] {
     accent-color: gray;
@@ -109,7 +120,7 @@
             <div class="customer">Информация о заказе</div>
           </div>
           <img class="info-down" src="img/line-2.svg" />
-          <img class="rectangle-3" src="img/car_picture.png" />
+          <img class="rectangle-3" id="imgcar" name="imgcar" src="img/car_picture.png" />
           <p class="classic">
             <span class="car-price">Kia K5 2022<br /></span>
             <span class="price">3 444 900 ₽<br /><br /></span>
@@ -122,7 +133,7 @@
         </div>
       </div>
     </div>
-
+    <script src="static/change_imgcar.js"></script>
    <script>
     var modal = document.querySelector(".modal");
     var trigger = document.querySelector(".trigger");
