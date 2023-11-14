@@ -112,7 +112,7 @@
   letter-spacing: 0;
   line-height: normal;
 }
-.frame .label-year {
+.frame .label-color {
   width: 292px;
   top: 383px;
   left: 584px;
@@ -125,7 +125,7 @@
   letter-spacing: 0;
   line-height: normal;
 }
-.frame .year {
+.frame .color {
   width: 292px;
   top: 417px;
   left: 584px;
@@ -138,7 +138,7 @@
   letter-spacing: 0;
   line-height: normal;
 }
-.frame .label-color {
+.frame .label-year {
   width: 292px;
   top: 470px;
   left: 584px;
@@ -151,7 +151,7 @@
   letter-spacing: 0;
   line-height: normal;
 }
-.frame .color {
+.frame .year {
   width: 292px;
   top: 504px;
   left: 584px;

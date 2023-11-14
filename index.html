@@ -41,6 +41,9 @@
   };
   document.addEventListener("DOMContentLoaded", () => {
     dynamicSelect("brand", "model");
+    dynamicSelect("model", "year");
+    dynamicSelect("model", "color");
+    dynamicSelect("model", "car equipment");
   });
 })();
         </script>
@@ -60,85 +63,79 @@
 
         <input class="overlap-group">
           <label for="brand" class="label-brand">Марка:</label>
+
           <form action="#" method="post">
+
             <select id="brand" class="brand">
               <option value="-">-</option>
-              <option value="Audi">Audi</option>
-              <option value="BMW">BMW</option>
               <option value="Hyundai">Hyundai</option>
               <option value="Kia">Kia</option>
-              <option value="Volkswagen">Volkswagen</option>
             </select>
 
             <label for="model" class="label-model">Модель:</label>
-            <select id="model"class="model">
 
+            <select id="model" class="model">
               <option class="-" value="-">-</option>
-
-              <option class="Audi" value="-">-</option>
-              <option class="Audi" value="Audi1">Audi A5</option>
-              <option class="Audi" value="Audi2">Audi A6</option>
-              <option class="Audi" value="Audi3">Audi A7</option>
-              <option class="Audi" value="Audi4">Audi RS5</option>
-              <option class="Audi" value="Audi5">Audi S4</option>
-
-              <option class="BMW" value="-">-</option>
-              <option class="BMW" value="BMW1">BMW 3 Series GT</option>
-              <option class="BMW" value="BMW2">BMW 5 Series</option>
-              <option class="BMW" value="BMW3">BMW i8</option>
-              <option class="BMW" value="BMW4">BMW M5</option>
-              <option class="BMW" value="BMW5">BMW X3 M</option>
-
               <option class="Hyundai" value="-">-</option>
               <option class="Hyundai" value="Hyundai1">Elantra</option>
               <option class="Hyundai" value="Hyundai2">Sonata</option>
-              <option class="Hyundai" value="Hyundai3">Solaris</option>
-              <option class="Hyundai" value="Hyundai4">Equus</option>
-              <option class="Hyundai" value="Hyundai5">Genesis</option>
-
               <option class="Kia" value="-">-</option>
               <option class="Kia" value="Kia1">K5</option>
               <option class="Kia" value="Kia2">Cerato</option>
-              <option class="Kia" value="Kia3">Optima</option>
-              <option class="Kia" value="Kia4">Stinger</option>
-              <option class="Kia" value="Kia5">EV6</option>
-
-              <option class="Volkswagen" value="-">-</option>
-              <option class="Volkswagen" value="Volkswagen1">Jetta</option>
-              <option class="Volkswagen" value="Volkswagen2">Passat CC</option>
-              <option class="Volkswagen" value="Volkswagen3">Touareg</option>
-              <option class="Volkswagen" value="Volkswagen4">Tiguan</option>
-              <option class="Volkswagen" value="Volkswagen5">Phaeton</option>
             </select>
-          </form>
 
             <label for="year" class="label-year">Год:</label>
-            <select name="year" id="year" class="year" required>
-            <option value="">-</option>
-            <option value="2023">2023</option>
-            <option value="2022">2022</option>
-            <option value="2021">2021</option>
-            <option value="2020">2020</option>
-            <option value="2019">2019</option>
-          </select>
+
+            <select id="year" class="year">
+
+              <option class="-" value="-">-</option>
+
+              <option class="Hyundai1" value="-">-</option>
+              <option class="Hyundai1" value="2022">2022</option>
+              <option class="Hyundai2" value="-">-</option>
+              <option class="Hyundai2" value="2023">2023</option>
+
+              <option class="Kia1" value="-">-</option>
+              <option class="Kia1" value="2022">2022</option>
+              <option class="Kia2" value="-">-</option>
+              <option class="Kia2" value="2021">2021</option>
+            </select>
 
             <label for="color" class="label-color">Цвет:</label>
+
             <select name="color" id="color" class="color" required>
-            <option value="">-</option>
-            <option value="white">Белый</option>
-            <option value="red">Красный</option>
-            <option value="gray">Серый</option>
-            <option value="blue">Синий</option>
-            <option value="black">Черный</option>
+
+              <option class="-" value="">-</option>
+
+              <option class="Hyundai1" value="-">-</option>
+              <option class="Hyundai1" value="blue">Синий</option>
+              <option class="Hyundai2" value="-">-</option>
+              <option class="Hyundai2" value="white">Белый</option>
+
+              <option class="Kia1" value="-">-</option>
+              <option class="Kia1" value="gray">Серый</option>
+              <option class="Kia2" value="-">-</option>
+              <option class="Kia2" value="red">Красный</option>
+
           </select>
 
             <label for="car equipment" class="label-equipment">Комплектация:</label>
+
             <select name="car equipment" id="car equipment" class="equipment" required>
-            <option value="">-</option>
-            <option value="base">Базовая</option>
-            <option value="sred">Средняя</option>
-            <option value="max">Максимальная</option>
-          </select>
+
+              <option class="-" value="">-</option>
+
+              <option class="Hyundai1" value="-">-</option>
+              <option class="Hyundai1" value="sred">Средняя</option>
+              <option class="Hyundai2" value="-">-</option>
+              <option class="Hyundai2" value="base">Базовая</option>
+
+              <option class="Kia1" value="-">-</option>
+              <option class="Kia1" value="max">Максимальная</option>
+              <option class="Kia2" value="-">-</option>
+              <option class="Kia2" value="sred">Средняя</option>
+            </select>
+          </form>
 
           <div class="search"></div>
           <div class="loupe"></div>

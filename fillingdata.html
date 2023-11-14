@@ -122,9 +122,14 @@
           <img class="info-down" src="img/line-2.svg" />
           <img class="rectangle-3" id="imgcar" name="imgcar" src="img/car_picture.png" />
           <p class="classic">
-            <span class="car-price">Kia K5 2022<br /></span>
-            <span class="price">3 444 900 ₽<br /><br /></span>
-            <span class="color">Цвет: серый<br />Комплектация: максимальная</span>
+            <span id="name_car" class="car-price">Kia K5 2022<br/></span>
+            <br/>
+            <span id="price" class="price">3 444 900 ₽</span>
+            <br/> <br/>
+            <span id="color" class="color">Цвет: серый</span>
+            <br/>
+            <span id="equipment" class="color">Комплектация: максимальная</span>
+            <br/>
           </p>
           <p class="left-text">
             <span class="car-price">5 000 ₽<br /></span>
@@ -178,7 +183,7 @@
         modal.classList.toggle("show-modal");
       }
       else{
-        alert('Есть пустые поля');
+        alert('Есть незаполненные поля');
       }
 
     }
