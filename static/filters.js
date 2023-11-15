@@ -71,9 +71,9 @@ var select_car_equipment = document.getElementById("car equipment");
 
 
 
-tr = document.getElementsByTagName("tr");
 
-function sendData(){
+
+function filterData(){
 	get_table_with_filter_data(get_filter_data());
 	
 }
@@ -143,8 +143,15 @@ function get_table_with_filter_data(filter_data){
 	}
 	html_table = html_table + "</table>";
 	div_table.innerHTML = html_table;
+	
+}
+function sendData(){
+	window.location.href = "fillingdata.html";
 }
 
 
-button_send.addEventListener("click", sendData);
+
+button_send.addEventListener("click", filterData);
+
+
 

@@ -1,50 +1,52 @@
-var data = [
-  {
+var data = [{
     "brand": "Kia",
     "model": "Cerato",
-    "color": "красный",
+    "color": "Красный",
     "year": "2021",
-    "equipment": "средняя",
+    "equipment": "Средняя",
 	"price": "3 015 900 ₽",
-	"img": "Kia_Cerato_красный.jpg",
-  },
+	"img": "Kia_Cerato_красный.jpg"
+  }
+  ,
   {
     "brand": "Kia",
     "model": "K5",
-    "color": "серый",
+    "color": "Серый",
     "year": "2022",
-    "equipment": "максимальная",
+    "equipment": "Максимальная",
 	"price": "3 444 900 ₽",
-	"img": "Kia_K5_серый.jpg",
+	"img": "Kia_K5_серый.jpg"
   },
   {
     "brand": "Hyundai",
     "model": "Elantra",
-    "color": "синий",
+    "color": "Синий",
     "year": "2022",
-    "equipment": "средняя",
+    "equipment": "Средняя",
 	"price": "3 269 900 ₽",
-	"img": "Hyundai_Elantra_синий.jpg",
+	"img": "Hyundai_Elantra_синий.jpg"
   },
   {
     "brand": "Hyundai",
     "model": "Elantra",
-    "color": "красный",
+    "color": "Красный",
     "year": "2022",
-    "equipment": "максимальная",
+    "equipment": "Максимальная",
 	"price": "4 269 900 ₽",
-	"img": "Hyundai_Elantra_красный.jpg",
+	"img": "Hyundai_Elantra_красный.jpg"
   },
   {
     "brand": "Hyundai",
     "model": "Sonata",
-    "color": "белый",
+    "color": "Белый",
     "year": "2023",
-    "equipment": "базовая",
+    "equipment": "Базовая",
 	"price": "3 122 900 ₽",
-	"img": "Hyundai_Sonata_белый.jpg",
-  },
- ]
+	"img": "Hyundai_Sonata_белый.jpg"
+  }
+]
+
+
 var keys = [];
 var div_table = document.getElementById("tablecar");
 var html_table = "";
