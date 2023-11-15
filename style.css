@@ -7,8 +7,8 @@
 }
 .frame .div {
   background-color: #c1c1c1;
-  width: 1440px;
-  height: 1400px;
+  width: 1700px;
+  height: 2200px;
   position: relative;
 }
 .frame .overlap-group {
@@ -257,10 +257,38 @@ input[type=radio] {
   margin: auto;
   transition: transform .4s ease;
   cursor: pointer;
-  top: 750px;
+  top: 1400px;
   left: 480px;
 }
 
+.tablecar {
+ position: absolute;
+  top: 700px;
+  left: 480px;
+}
+
+table{
+	 width: 100%;
+  margin: 10 auto;
+  display: block;
+  border-spacing: 10px;
+  
+}
+th,
+td {
+  padding: 5px 10px;
+  border-top-width: 0;
+  border-left-width: 0;
+  border: 10px;
+  	border-color: black;
+}
+
+
+
+tbody{
+	border: 10px;
+	border-color: black;
+}
 .container {
   width: 100%;
   max-width: 800px;

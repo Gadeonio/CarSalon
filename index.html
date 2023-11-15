@@ -1,65 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="style.css" />
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="globals.css" />
+		<link rel="stylesheet" href="style.css" />
 
-  </head>
-  <body>
-    <div class="frame">
-      <div class="div">
-        <img class="rectangle" src="img/rectangle-1.png" />
-
+	</head>
+	<body>
+		<div class="frame">
+			<div class="div">
+			<img class="rectangle" src="img/rectangle-1.png" />
+			
         <script>
-          (() => {
-  const dynamicSelect = (id1, id2) => {
-    const sel1 = document.getElementById(id1);
-    const sel2 = document.getElementById(id2);
-    const clone = sel2.cloneNode(true);
-    const clonedOptions = clone.getElementsByTagName("option");
-    refreshDynamicSelectOptions(sel1, sel2, clonedOptions);
-    sel1.addEventListener('change', () => {
-      refreshDynamicSelectOptions(sel1, sel2, clonedOptions);
-    });
-  };
-  const refreshDynamicSelectOptions = (sel1, sel2, clonedOptions) => {
-    while (sel2.options.length) {
-      sel2.remove(0);
-    }
-    const selectedOption = sel1.options[sel1.selectedIndex].value;
-    for (let i = 0; i < clonedOptions.length; i++) {
-      const option = clonedOptions[i];
-      if (option.classList.contains('select') ||
-        option.classList.contains(selectedOption)) {
-        sel2.appendChild(option.cloneNode(true));
-      }
-    }
-    const event = document.createEvent('HTMLEvents');
-    event.initEvent('change', true, false);
-    sel2.dispatchEvent(event);
-  };
-  document.addEventListener("DOMContentLoaded", () => {
-    dynamicSelect("brand", "model");
-    dynamicSelect("model", "year");
-    dynamicSelect("model", "color");
-    dynamicSelect("model", "car equipment");
-  });
-})();
-        </script>
-         <script>
-   function isEmail() {
-    var str = document.getElementById("email").value;
-    var status = document.getElementById("status");
-    var re = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
-    if (re.test(str)) status.innerHTML = "Адрес правильный";
-      else status.innerHTML = "Адрес неверный";
-    if(isEmpty(str)) status.innerHTML = "Поле пустое";
-   }
-   function isEmpty(str){
-    return (str == null) || (str.length == 0);
-   }
-  </script>
+				  (() => {
+		  const dynamicSelect = (id1, id2) => {
+			const sel1 = document.getElementById(id1);
+			const sel2 = document.getElementById(id2);
+			const clone = sel2.cloneNode(true);
+			const clonedOptions = clone.getElementsByTagName("option");
+			refreshDynamicSelectOptions(sel1, sel2, clonedOptions);
+			sel1.addEventListener('change', () => {
+			  refreshDynamicSelectOptions(sel1, sel2, clonedOptions);
+			});
+		  };
+		  const refreshDynamicSelectOptions = (sel1, sel2, clonedOptions) => {
+			while (sel2.options.length) {
+			  sel2.remove(0);
+			}
+			const selectedOption = sel1.options[sel1.selectedIndex].value;
+			for (let i = 0; i < clonedOptions.length; i++) {
+			  const option = clonedOptions[i];
+			  if (option.classList.contains('select') ||
+				option.classList.contains(selectedOption)) {
+				sel2.appendChild(option.cloneNode(true));
+			  }
+			}
+			const event = document.createEvent('HTMLEvents');
+			event.initEvent('change', true, false);
+			sel2.dispatchEvent(event);
+		  };
+		  document.addEventListener("DOMContentLoaded", () => {
+			dynamicSelect("brand", "model");
+		  
+		  });
+		})();
+			</script>
+			<script>
+		   function isEmail() {
+			var str = document.getElementById("email").value;
+			var status = document.getElementById("status");
+			var re = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+			if (re.test(str)) status.innerHTML = "Адрес правильный";
+			  else status.innerHTML = "Адрес неверный";
+			if(isEmpty(str)) status.innerHTML = "Поле пустое";
+		   }
+		   function isEmpty(str){
+			return (str == null) || (str.length == 0);
+		   }
+			</script>
 
         <input class="overlap-group">
           <label for="brand" class="label-brand">Марка:</label>
@@ -109,6 +107,7 @@
 
               <option class="Hyundai1" value="-">-</option>
               <option class="Hyundai1" value="blue">Синий</option>
+			                <option class="Hyundai1" value="red">Красный</option>
               <option class="Hyundai2" value="-">-</option>
               <option class="Hyundai2" value="white">Белый</option>
 
@@ -117,36 +116,37 @@
               <option class="Kia2" value="-">-</option>
               <option class="Kia2" value="red">Красный</option>
 
-          </select>
+			</select>
 
             <label for="car equipment" class="label-equipment">Комплектация:</label>
 
             <select name="car equipment" id="car equipment" class="equipment" required>
+				<option class="-" value="">-</option>
 
-              <option class="-" value="">-</option>
+				<option class="Hyundai1" value="-">-</option>
+				<option class="Hyundai1" value="sred">Средняя</option>
+				<option class="Hyundai2" value="-">-</option>
+				<option class="Hyundai2" value="base">Базовая</option>
 
-              <option class="Hyundai1" value="-">-</option>
-              <option class="Hyundai1" value="sred">Средняя</option>
-              <option class="Hyundai2" value="-">-</option>
-              <option class="Hyundai2" value="base">Базовая</option>
-
-              <option class="Kia1" value="-">-</option>
-              <option class="Kia1" value="max">Максимальная</option>
-              <option class="Kia2" value="-">-</option>
-              <option class="Kia2" value="sred">Средняя</option>
+				<option class="Kia1" value="-">-</option>
+				<option class="Kia1" value="max">Максимальная</option>
+				<option class="Kia2" value="-">-</option>
+				<option class="Kia2" value="sred">Средняя</option>
             </select>
-          </form>
+        </form>
 
-          <div class="search"></div>
-          <div class="loupe"></div>
-          <div class="text-search">Поиск автомобиля</div>
-          <div class="group"></div>
+        <div class="search"></div>
+        <div class="loupe"></div>
+        <div class="text-search">Поиск автомобиля</div>
+        <div class="group"></div>
 
           <!--<div class="button" onclick="isEmail()">
             <a href="fillingdata.html"></div>-->
           <button type="button" id="button_send" class="button-send-cars-attribute">Выбрать</button>
           <!--<div class="button-send-cars-attribute">Выбрать</div>-->
 
+		<div id="tablecar" name="tablecar" class="tablecar">
+		</div>
           <div class="container">
           <input type="radio" name="slider" id="item-1" checked>
           <input type="radio" name="slider" id="item-2">
@@ -163,6 +163,11 @@
             </label>
           </div>
         </div>
-        <script src="static/send_data.js"></script>
-  </body>
+		<script src="static/filters.js"></script>
+		<script src="static/get_table.js"></script>
+		
+		</div>
+		</div>
+        <!--<script src="static/send_data.js"></script>-->
+	</body>
 </html>
