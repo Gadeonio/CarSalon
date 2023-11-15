@@ -1,3 +1,6 @@
+
+
+
 var car_data = [
   {
     "brand": "Kia",
@@ -6,7 +9,7 @@ var car_data = [
     "year": "2021",
     "equipment": "Средняя",
 	"price": "3 015 900 ₽",
-	"img": "Kia_Cerato_красный.jpg",
+	"img": "Kia_Cerato_красный.jpg"
   },
   {
     "brand": "Kia",
@@ -15,7 +18,7 @@ var car_data = [
     "year": "2022",
     "equipment": "Максимальная",
 	"price": "3 444 900 ₽",
-	"img": "Kia_K5_серый.jpg",
+	"img": "Kia_K5_серый.jpg"
   },
   {
     "brand": "Hyundai",
@@ -24,7 +27,7 @@ var car_data = [
     "year": "2022",
     "equipment": "Средняя",
 	"price": "3 269 900 ₽",
-	"img": "Hyundai_Elantra_синий.jpg",
+	"img": "Hyundai_Elantra_синий.jpg"
   },
   {
     "brand": "Hyundai",
@@ -33,7 +36,7 @@ var car_data = [
     "year": "2022",
     "equipment": "Максимальная",
 	"price": "4 269 900 ₽",
-	"img": "Hyundai_Elantra_красный.jpg",
+	"img": "Hyundai_Elantra_красный.jpg"
   },
   {
     "brand": "Hyundai",
@@ -42,8 +45,8 @@ var car_data = [
     "year": "2023",
     "equipment": "Базовая",
 	"price": "3 122 900 ₽",
-	"img": "Hyundai_Sonata_белый.jpg",
-  },
+	"img": "Hyundai_Sonata_белый.jpg"
+  }
  ]
 
 var keys = [];
@@ -74,37 +77,6 @@ function sendData(){
 	get_table_with_filter_data(get_filter_data());
 	
 }
-/*function sendData(){
-    //alert("Сработала кнопка, УРА!!!");		
-	if (!(select_brand.value === '-')){
-		for (i = 0; i < tr.length; i++) {
-			td = tr[i].getElementsByTagName("td")[0];
-				if (td) {
-				  txtValue = td.textContent || td.innerText;
-				  if (txtValue.indexOf(select_brand.options[select_brand.selectedIndex].text) > -1) {
-					tr[i].style.display = "";
-				  } else {
-					tr[i].style.display = "none";
-				  }
-				}
-			  }
-    }
-	
-    else{
-        console.log("brand_index:", select_model.options[select_model.selectedIndex].index);
-        console.log("brand_text:", select_model.options[select_model.selectedIndex].text);
-        console.log("brand_value:", select_model.options[select_model.selectedIndex].value);
-        console.log("type:", typeof(select_brand));
-        localStorage.setItem('brand', select_brand.options[select_brand.selectedIndex].text);
-        localStorage.setItem('model',select_model.options[select_model.selectedIndex].text);
-        localStorage.setItem('year',select_year.options[select_year.selectedIndex].text);
-        localStorage.setItem('color',select_color.options[select_color.selectedIndex].text);
-        localStorage.setItem('car_equipment',select_car_equipment.options[select_car_equipment.selectedIndex].text);
-
-        window.location.href = "fillingdata.html";
-    }
-
-}*/
 
 function get_filter_data(){
 	let filter_data = car_data;	
@@ -161,7 +133,7 @@ function get_table_with_filter_data(filter_data){
 		html_table = html_table + "<tr>";
 		for (key in filter_data[i]) {		
 			if (key === "img"){
-				html_table = html_table + "<td>" + "<img width=200 height=100 src='D:/Учеба УГАТУ/4 курс/Проектрирование человеко-машинного интерфейса/Лабы/ЛР№5/CarSalon2/img_car/" + data[i][key] + "'>" + "</td>";
+				html_table = html_table + "<td>" + "<img width=200 height=100 src='D:/Учеба УГАТУ/4 курс/Проектрирование человеко-машинного интерфейса/Лабы/ЛР№5/CarSalon2/img_car/" + filter_data[i][key] + "'>" + "</td>";
 			}
 			else{
 				html_table = html_table + "<td>" + filter_data[i][key] + "</td>";
@@ -173,4 +145,6 @@ function get_table_with_filter_data(filter_data){
 	div_table.innerHTML = html_table;
 }
 
+
 button_send.addEventListener("click", sendData);
+
