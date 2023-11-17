@@ -122,7 +122,7 @@ function get_table_with_filter_data(filter_data){
 		html_table = html_table + "<tr>";
 		for (key in filter_data[i]) {		
 			if (key === "img"){
-				html_table = html_table + "<td>" + "<img width=200 height=130 src='C:/Users/acer/Desktop/УГАТУ/4 курс/ПЧМИ/CarSalon2/img_car/" + filter_data[i][key] + "'>" + "</td>";
+				html_table = html_table + "<td>" + "<img width=200 height=130 src='img_car/" + filter_data[i][key] + "'>" + "</td>";
 			}
 			else{
 				html_table = html_table + "<td>" + filter_data[i][key] + "</td>";
@@ -134,22 +134,22 @@ function get_table_with_filter_data(filter_data){
 	div_table.innerHTML = html_table;
 
 	trs = document.getElementsByTagName("tr");
-for (let tr of trs) {
-	tr.addEventListener("click", () => {
-    cells = tr.getElementsByTagName('td');
-    	localStorage.setItem('img',cells[0].innerHTML);
-	localStorage.setItem('brand', cells[1].innerHTML);
-    localStorage.setItem('model', cells[2].innerHTML);
-    localStorage.setItem('year', cells[3].innerHTML);
-    localStorage.setItem('color',cells[4].innerHTML);
-    localStorage.setItem('car_equipment',cells[5].innerHTML);
-	localStorage.setItem('price',cells[6].innerHTML);
-	console.log(cells[0].innerHTML);
+	for (let tr of trs) {
+		tr.addEventListener("click", () => {
+		cells = tr.getElementsByTagName('td');
+			localStorage.setItem('img',cells[0].innerHTML);
+		localStorage.setItem('brand', cells[1].innerHTML);
+		localStorage.setItem('model', cells[2].innerHTML);
+		localStorage.setItem('year', cells[3].innerHTML);
+		localStorage.setItem('color',cells[4].innerHTML);
+		localStorage.setItem('car_equipment',cells[5].innerHTML);
+		localStorage.setItem('price',cells[6].innerHTML);
+		console.log(cells[0].innerHTML);
 
-	window.location.href = "fillingdata.html";
-	});
+		window.location.href = "fillingdata.html";
+		});
 
-}
+	}
 }
 function sendData(){
 	window.location.href = "fillingdata.html";

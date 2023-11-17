@@ -60,7 +60,7 @@ for (var i = 0; i < data.length; i++) {
 	html_table = html_table + "<tr>";
 	for (key in data[i]) {		
 		if (key === "img"){
-			html_table = html_table + "<td>" + "<img width=200 height=130 src='C:/Users/acer/Desktop/УГАТУ/4 курс/ПЧМИ/CarSalon2/img_car/" + data[i][key] + "'>" + "</td>";
+			html_table = html_table + "<td>" + "<img width=200 height=130 src='img_car/" + data[i][key] + "'>" + "</td>";
 		}
 		else{
 			html_table = html_table + "<td>" + data[i][key] + "</td>";
