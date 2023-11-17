@@ -1,4 +1,4 @@
-let file_name_car = '';
+/*let file_name_car = '';
 let name_car = '';
 let price = '';
 let color = '';
@@ -44,7 +44,15 @@ document.getElementById("imgcar").src = 'img/' + file_name_car;
 document.getElementById("name_car").textContent = name_car;
 document.getElementById("price").textContent = price;
 document.getElementById("color").textContent = color;
-document.getElementById("equipment").textContent = equipment;
+document.getElementById("equipment").textContent = equipment;*/
+console.log(localStorage.getItem('img'));
+console.log(localStorage);
+document.getElementById("imgcar").src = localStorage.getItem('img');
+document.getElementById("name_car").textContent = localStorage.getItem('brand') + ' ' + localStorage.getItem('model') + ' ' + localStorage.getItem('year');
+document.getElementById("price").textContent = localStorage.getItem('price');
+document.getElementById("color").textContent = localStorage.getItem('color');
+document.getElementById("equipment").textContent = localStorage.getItem('equipment');
+
 
 
 
