@@ -1,53 +1,51 @@
-
-
-
 var car_data = [
-  {
+{
+	"img": "Kia_Cerato_красный.jpg",
     "brand": "Kia",
     "model": "Cerato",
     "color": "Красный",
     "year": "2021",
     "equipment": "Средняя",
-	"price": "3 015 900 ₽",
-	"img": "Kia_Cerato_красный.jpg"
-  },
+	"price": "3 015 900 ₽"
+  }
+  ,
   {
+  	"img": "Kia_K5_серый.jpg",
     "brand": "Kia",
     "model": "K5",
     "color": "Серый",
     "year": "2022",
     "equipment": "Максимальная",
-	"price": "3 444 900 ₽",
-	"img": "Kia_K5_серый.jpg"
+	"price": "3 444 900 ₽"
   },
   {
+  	"img": "Hyundai_Elantra_синий.jpg",
     "brand": "Hyundai",
     "model": "Elantra",
     "color": "Синий",
     "year": "2022",
     "equipment": "Средняя",
-	"price": "3 269 900 ₽",
-	"img": "Hyundai_Elantra_синий.jpg"
+	"price": "3 269 900 ₽"
   },
   {
+  	"img": "Hyundai_Elantra_красный.jpg",
     "brand": "Hyundai",
     "model": "Elantra",
     "color": "Красный",
     "year": "2022",
     "equipment": "Максимальная",
-	"price": "4 269 900 ₽",
-	"img": "Hyundai_Elantra_красный.jpg"
+	"price": "4 269 900 ₽"
   },
   {
+  	"img": "Hyundai_Sonata_белый.jpg",
     "brand": "Hyundai",
     "model": "Sonata",
     "color": "Белый",
     "year": "2023",
     "equipment": "Базовая",
-	"price": "3 122 900 ₽",
-	"img": "Hyundai_Sonata_белый.jpg"
+	"price": "3 122 900 ₽"
   }
- ]
+]
 
 var keys = [];
 var div_table = document.getElementById("tablecar");
@@ -57,25 +55,16 @@ var button_send = document.getElementById("button_send");
 
 var select_brand = document.getElementById("brand");
 
-
 var select_model = document.getElementById("model");
-
 
 var select_year = document.getElementById("year");
 
-
 var select_color = document.getElementById("color");
-
 
 var select_car_equipment = document.getElementById("car equipment");
 
-
-
-
-
 function filterData(){
 	get_table_with_filter_data(get_filter_data());
-	
 }
 
 function get_filter_data(){
@@ -133,7 +122,7 @@ function get_table_with_filter_data(filter_data){
 		html_table = html_table + "<tr>";
 		for (key in filter_data[i]) {		
 			if (key === "img"){
-				html_table = html_table + "<td>" + "<img width=200 height=100 src='D:/Учеба УГАТУ/4 курс/Проектрирование человеко-машинного интерфейса/Лабы/ЛР№5/CarSalon2/img_car/" + filter_data[i][key] + "'>" + "</td>";
+				html_table = html_table + "<td>" + "<img width=200 height=130 src='C:/Users/acer/Desktop/УГАТУ/4 курс/ПЧМИ/CarSalon2/img_car/" + filter_data[i][key] + "'>" + "</td>";
 			}
 			else{
 				html_table = html_table + "<td>" + filter_data[i][key] + "</td>";
@@ -143,14 +132,28 @@ function get_table_with_filter_data(filter_data){
 	}
 	html_table = html_table + "</table>";
 	div_table.innerHTML = html_table;
-	
+
+	trs = document.getElementsByTagName("tr");
+for (let tr of trs) {
+	tr.addEventListener("click", () => {
+    cells = tr.getElementsByTagName('td');
+    	localStorage.setItem('img',cells[0].innerHTML);
+	localStorage.setItem('brand', cells[1].innerHTML);
+    localStorage.setItem('model', cells[2].innerHTML);
+    localStorage.setItem('year', cells[3].innerHTML);
+    localStorage.setItem('color',cells[4].innerHTML);
+    localStorage.setItem('car_equipment',cells[5].innerHTML);
+	localStorage.setItem('price',cells[6].innerHTML);
+	console.log(cells[0].innerHTML);
+
+	window.location.href = "fillingdata.html";
+	});
+
+}
 }
 function sendData(){
 	window.location.href = "fillingdata.html";
 }
-
-
-
 button_send.addEventListener("click", filterData);
 
 

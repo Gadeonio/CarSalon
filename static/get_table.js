@@ -1,48 +1,49 @@
-var data = [{
+var data = [
+{
+	"img": "Kia_Cerato_красный.jpg",
     "brand": "Kia",
     "model": "Cerato",
     "color": "Красный",
     "year": "2021",
     "equipment": "Средняя",
-	"price": "3 015 900 ₽",
-	"img": "Kia_Cerato_красный.jpg"
+	"price": "3 015 900 ₽"
   }
   ,
   {
+  	"img": "Kia_K5_серый.jpg",
     "brand": "Kia",
     "model": "K5",
     "color": "Серый",
     "year": "2022",
     "equipment": "Максимальная",
-	"price": "3 444 900 ₽",
-	"img": "Kia_K5_серый.jpg"
+	"price": "3 444 900 ₽"
   },
   {
+  	"img": "Hyundai_Elantra_синий.jpg",
     "brand": "Hyundai",
     "model": "Elantra",
     "color": "Синий",
     "year": "2022",
     "equipment": "Средняя",
-	"price": "3 269 900 ₽",
-	"img": "Hyundai_Elantra_синий.jpg"
+	"price": "3 269 900 ₽"
   },
   {
+  	"img": "Hyundai_Elantra_красный.jpg",
     "brand": "Hyundai",
     "model": "Elantra",
     "color": "Красный",
     "year": "2022",
     "equipment": "Максимальная",
-	"price": "4 269 900 ₽",
-	"img": "Hyundai_Elantra_красный.jpg"
+	"price": "4 269 900 ₽"
   },
   {
+  	"img": "Hyundai_Sonata_белый.jpg",
     "brand": "Hyundai",
     "model": "Sonata",
     "color": "Белый",
     "year": "2023",
     "equipment": "Базовая",
-	"price": "3 122 900 ₽",
-	"img": "Hyundai_Sonata_белый.jpg"
+	"price": "3 122 900 ₽"
   }
 ]
 
@@ -59,7 +60,7 @@ for (var i = 0; i < data.length; i++) {
 	html_table = html_table + "<tr>";
 	for (key in data[i]) {		
 		if (key === "img"){
-			html_table = html_table + "<td>" + "<img width=200 height=100 src='D:/Учеба УГАТУ/4 курс/Проектрирование человеко-машинного интерфейса/Лабы/ЛР№5/CarSalon2/img_car/" + data[i][key] + "'>" + "</td>";
+			html_table = html_table + "<td>" + "<img width=200 height=130 src='C:/Users/acer/Desktop/УГАТУ/4 курс/ПЧМИ/CarSalon2/img_car/" + data[i][key] + "'>" + "</td>";
 		}
 		else{
 			html_table = html_table + "<td>" + data[i][key] + "</td>";

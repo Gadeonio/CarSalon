@@ -38,13 +38,13 @@ else if (localStorage.getItem('brand') === 'Hyundai'){
         equipment = 'Комплектация: базовая';
     }
 }
-
+/*
 else{
     alert('Машины не будет, Алина приняла лень');
 }
 if (file_name_car ===''){
 	alert('Модель не выбрана')
-}
+} */
 
 document.getElementById("imgcar").src = 'img/' + file_name_car;
 document.getElementById("name_car").textContent = name_car;

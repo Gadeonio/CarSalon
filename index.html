@@ -45,6 +45,7 @@
 		  });
 		})();
 			</script>
+
 			<script>
 		   function isEmail() {
 			var str = document.getElementById("email").value;
@@ -87,16 +88,9 @@
             <select id="year" class="year">
 
               <option class="-" value="-">-</option>
-
-              <option class="Hyundai1" value="-">-</option>
-              <option class="Hyundai1" value="2022">2022</option>
-              <option class="Hyundai2" value="-">-</option>
-              <option class="Hyundai2" value="2023">2023</option>
-
-              <option class="Kia1" value="-">-</option>
-              <option class="Kia1" value="2022">2022</option>
-              <option class="Kia2" value="-">-</option>
-              <option class="Kia2" value="2021">2021</option>
+                <option class="Hyundai1" value="2022">2021</option>
+              <option class="Hyundai2" value="2023">2022</option>
+              <option class="Kia1" value="2022">2023</option>
             </select>
 
             <label for="color" class="label-color">Цвет:</label>
@@ -104,16 +98,9 @@
             <select name="color" id="color" class="color" required>
 
               <option class="-" value="">-</option>
-
-              <option class="Hyundai1" value="-">-</option>
               <option class="Hyundai1" value="blue">Синий</option>
-			                <option class="Hyundai1" value="red">Красный</option>
-              <option class="Hyundai2" value="-">-</option>
               <option class="Hyundai2" value="white">Белый</option>
-
-              <option class="Kia1" value="-">-</option>
               <option class="Kia1" value="gray">Серый</option>
-              <option class="Kia2" value="-">-</option>
               <option class="Kia2" value="red">Красный</option>
 
 			</select>
@@ -122,17 +109,13 @@
 
             <select name="car equipment" id="car equipment" class="equipment" required>
 				<option class="-" value="">-</option>
-
-				<option class="Hyundai1" value="-">-</option>
-				<option class="Hyundai1" value="sred">Средняя</option>
-				<option class="Hyundai2" value="-">-</option>
 				<option class="Hyundai2" value="base">Базовая</option>
-
-				<option class="Kia1" value="-">-</option>
 				<option class="Kia1" value="max">Максимальная</option>
-				<option class="Kia2" value="-">-</option>
 				<option class="Kia2" value="sred">Средняя</option>
             </select>
+                <label class="label">
+                    Марка Модель Цвет Год Комплектация Цена
+                </label>
         </form>
 
         <div class="search"></div>
@@ -144,6 +127,8 @@
             <a href="fillingdata.html"></div>-->
           <button type="button" id="button_send" class="button-send-cars-attribute">Выбрать</button>
           <!--<div class="button-send-cars-attribute">Выбрать</div>-->
+
+
 
 		<div id="tablecar" name="tablecar" class="tablecar">
 		</div>
